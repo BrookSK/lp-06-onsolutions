@@ -6,7 +6,8 @@ Landing page de captação de leads para o serviço **Dashboards e BI** da ON So
 ## 2. Arquivo de referência e URL de destino
 - **Arquivo de referência (fonte de verdade):** `06-lp-dashboard-bi.html`
 - **URL de destino:** https://onsolutionsbrasil.com.br/lp/dashboard-bi/
-- **Arquivo implementado:** `lp/dashboard-bi/index.html` (o caminho `lp/dashboard-bi/` corresponde exatamente à URL de destino; servido como `index.html`).
+- **Arquivo implementado:** `index.html` (na raiz do repositório).
+- **Nota de deploy:** o domínio de publicação é `lp-06.onsolutionsbrasil.com.br`, cujo document root (via Plesk/Git) aponta para a raiz do repositório. Por isso o `index.html` foi colocado na **raiz** — assim a página é servida diretamente em `https://lp-06.onsolutionsbrasil.com.br/`. (A estrutura inicial em `lp/dashboard-bi/index.html` causava **403 Forbidden** na home do domínio por ausência de documento de índice na raiz.)
 
 ## 3. Estrutura de todas as seções
 Ordem idêntica à referência:
@@ -111,7 +112,7 @@ Observações:
 - **viewport** com `viewport-fit=cover`; hierarquia de títulos (`h1` único no hero, `h2` nas seções, `h3` nos cards); `aria-pressed`, `aria-live`, `aria-label` e `aria-hidden` preservados; estados de foco visíveis (`:focus-visible`); `prefers-reduced-motion` respeitado; `decoding="async"` nas imagens do carrossel.
 
 ## 14. Arquivos criados e modificados
-- **Criado:** `lp/dashboard-bi/index.html` (estrutura, CSS, textos, interatividade, WhatsApp, rastreamento e SEO completos; logos como placeholder).
+- **Criado:** `index.html` na raiz do repositório (estrutura, CSS, textos, interatividade, WhatsApp, rastreamento e SEO completos; logos como placeholder). Inicialmente em `lp/dashboard-bi/index.html` e depois movido para a raiz para casar com o document root do domínio `lp-06.onsolutionsbrasil.com.br` e resolver o 403 Forbidden.
 - **Criado:** `DOCUMENTACAO-LP06-DASHBOARD-BI.md` (este arquivo).
 - **Não modificado:** nenhum outro arquivo. O repositório não continha landing pages anteriores nem componentes compartilhados (apenas `README.md`), portanto não há risco de regressão em outras LPs.
 
